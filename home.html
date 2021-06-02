@@ -1,0 +1,132 @@
+<html>
+<head>
+
+  <title> My Medicines </title>
+
+  <link rel="stylesheet" href="css\style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+<section class="row1">
+<div class="navbar">
+  <nav>
+<img src="images\logo.2.2.jpg" class="logo">
+<div class="logo-name">
+    <h1> My Medicines</h1>
+  </div>
+<ul>
+
+  <li><a href="">Home</a></li>
+ <li><a href="">Services</a></li>
+   <li><a href="login-page.html" href="#cta1">Sign In</a></li>
+     <li><a href="register.html" href="#cta1">Sign Up</a></li>
+     <li><a href="" href="#cta">Contacts</a></li>
+</ul>
+</nav>
+
+<div class="info">
+  <h1>Welcome to<span> My Medicines</span> </h1>
+  <p>This is official website of My Medicines. <br>Upload prescription and tell us what you need.<br> we do the rest!</p>
+
+    <a href="login-page.html"> SIGN IN </a>
+
+</div>
+<div class ="img-box">
+  <img src="images\pattern.png" class="back-img">
+  <img src="images\doctor.png" class ="main-img">
+</div>
+
+
+</section>
+<section class="space">
+
+</section>
+<!-- covid stats -->
+<section class="covid">
+  <div class="countryname" >
+    <h1> <span>COVID-19</span> CASES IN <span>INDIA</span></h1>
+
+  </div>
+  <div class ="covidstats">
+  <div>
+    <h3>Total Cases</h3>
+    <span id="cases"></span>
+  </div>
+  <div>
+    <h3> Active Cases</h3>
+    <span id="active"></span>
+  </div>
+  <div>
+    <h3> Total Deaths</h3>
+    <span id="death"></span>
+  </div>
+</div>
+</section>
+<section>
+<div class="container-fluid" id="features">
+
+    <div class="row1">
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-check-circle fa-4x"></i>
+        <h3 class="feature-title">Free to Use.</h3>
+        <p>Come to us in your pursuit of wellness.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-bullseye fa-4x"></i>
+        <h3 class="feature-title">24/7 Support </h3>
+        <p>We hope you are safe and healthy!</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-heart fa-4x"></i>
+        <h3 class="feature-title">Your Feedback Is Appreciated.</h3>
+        <p>We love hearing from our users!</p>
+      </div>
+    </div>
+    <div class ="img2-box">
+    <img src="images\phto2.png" class="mask" alt=""></div>
+</section>
+
+
+<section class="row4" id="cta">
+
+  <div class="Contacts">
+    <i class="social-icon fab fa-facebook-f"></i>
+        <i class="social-icon fab fa-twitter"></i>
+      <i class="fab fa-linkedin-in"></i>
+        <i class="social-icon fas fa-envelope"></i>
+        </div>
+  <h4>Copyright © 2021 My Medicines. All rights are reserved.</h4>
+
+</section>
+
+<script type="text/javascript">
+
+fetch('https://corona.lmao.ninja/v2/countries/India')
+.then((response) => {
+  return response.json();
+})
+.then((data) => {
+  console.log(data);
+
+  document.getElementById("active").innerHTML = data.active.toLocaleString();
+  document.getElementById("cases").innerHTML = data.cases.toLocaleString();
+  document.getElementById("death").innerHTML = data.deaths.toLocaleString();
+
+
+});
+</script>
+</body>
+</html>
